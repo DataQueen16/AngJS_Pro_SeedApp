@@ -2,8 +2,8 @@ var login = {
     templateUrl: './login.html',
     controller: 'LoginController'
 };
-
-angular 
+  
+angular
     .module('components.auth')
     .component('login', login)
     .config(function ($stateProvider, $urlRouterProvider) {
@@ -11,7 +11,7 @@ angular
             .state('auth', {
                 redirectTo: 'auth.login',
                 url: '/auth',
-                template: 'div ui-view></div>'
+                template: '<div ui-view></div>'
             })
             .state('auth.login', {
                 url: '/login',
