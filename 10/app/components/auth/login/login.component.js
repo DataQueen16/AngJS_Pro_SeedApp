@@ -11,7 +11,8 @@ angular
       .state('auth', {
         redirectTo: 'auth.login',
         url: '/auth',
-        template: '<div ui-view></div>'
+        // template: '<div ui-view></div>'
+        template: 'trash'
       })
       .state('auth.login', {
         url: '/login',
