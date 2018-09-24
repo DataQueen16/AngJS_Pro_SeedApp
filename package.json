@@ -17,6 +17,7 @@
     "angular-ui-router": "1.0.0-beta.2",
     "angularfire": "^2.0.2",
     "babel": "^6.23.0",
+    "babel-register": "^6.26.0",
     "firebase": "3.3.0"
   },
   "devDependencies": {
