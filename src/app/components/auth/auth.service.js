@@ -10,6 +10,10 @@ function AuthService($firebaseAuth) {
         authData = user;
         return auth.$requireSignIn();
     }
+
+    function clearAuthData() {
+        authData = null;
+    }
     
     this.login = function (user) {
         return auth
@@ -21,6 +25,11 @@ function AuthService($firebaseAuth) {
         return auth
             .$createUserWithEmailAndPassword(user.email, user.password)
             .then(storeAuthData);
+            };
+            this.logout = function () {
+                return auth
+                    .$signOut()
+                    .then(clearAuthData);
             };
             this.requireAuthentication = function () {
                 return auth
