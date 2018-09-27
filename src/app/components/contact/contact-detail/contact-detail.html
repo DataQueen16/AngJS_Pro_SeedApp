@@ -29,6 +29,72 @@
                     name="email"
                     ng-model="$ctrl.contact.email">    
             </div>
+            <div class="contact__field">
+                    <label>
+                        Job Title 
+                    </label>
+                    <input
+                        type="text"
+                        name="jobTitle"
+                        ng-model="$ctrl.contact.job">    
+            </div>
+            <div class="contact__field">
+                    <label>
+                        Location
+                    </label>
+                    <input
+                        type="text"
+                        name="location"
+                        ng-model="$ctrl.contact.location">    
+            </div>
+            <div class="contact__box contact__box--no-margin">
+                <h3 class="contact__sub-title">
+                    Social
+                </h3>
+                <div class="contact__field">
+                        <label>
+                            Facebook 
+                        </label>
+                        <input
+                            type="text"
+                            name="facebook"
+                            ng-model="$ctrl.contact.social.facebook">    
+                </div>
+            <div class="contact__field">
+                    <label>
+                        Github 
+                    </label>
+                    <input
+                        type="text"
+                        name="github"
+                        ng-model="$ctrl.contact.social.github">    
+            </div> 
+            <div class="contact__field">
+                    <label>
+                        Twitter 
+                    </label>
+                    <input
+                        type="text"
+                        name="twitter"
+                        ng-model="$ctrl.contact.social.twitter">    
+            </div>
+            <div class="contact__field">
+                    <label>
+                        LinkedIn 
+                    </label>
+                    <input
+                        type="text"
+                        name="linkedin"
+                        ng-model="$ctrl.contact.social.linkedin">    
+            </div>   
+            </div>
         </div>
+
+        <div ng-if="$ctrl.isNewContact">
+            <button ng-disabled="contactDetailForm.$invalid">
+                Create contact
+            </button>
+        </div>
+
     </form>
 </div>
