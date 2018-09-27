@@ -91,7 +91,7 @@
             </div>   
         </div>
 
-        <div ng-if="$ctrl.isNewContact">
+        <div ng-if="!$ctrl.isNewContact">
             <button 
             ng-disabled="contactDetailForm.$invalid"
             ng-click="$ctrl.saveContact();">
