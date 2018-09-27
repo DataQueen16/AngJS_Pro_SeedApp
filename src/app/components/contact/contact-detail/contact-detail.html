@@ -47,19 +47,21 @@
                         name="location"
                         ng-model="$ctrl.contact.location">    
             </div>
-            <div class="contact__box contact__box--no-margin">
-                <h3 class="contact__sub-title">
-                    Social
-                </h3>
-                <div class="contact__field">
-                        <label>
-                            Facebook 
-                        </label>
-                        <input
-                            type="text"
-                            name="facebook"
-                            ng-model="$ctrl.contact.social.facebook">    
-                </div>
+        </div>
+
+        <div class="contact__box contact__box--no-margin">
+            <h3 class="contact__sub-title">
+                Social
+            </h3>
+            <div class="contact__field">
+                    <label>
+                        Facebook 
+                    </label>
+                    <input
+                        type="text"
+                        name="facebook"
+                        ng-model="$ctrl.contact.social.facebook">    
+            </div>
             <div class="contact__field">
                     <label>
                         Github 
@@ -87,14 +89,21 @@
                         name="linkedin"
                         ng-model="$ctrl.contact.social.linkedin">    
             </div>   
-            </div>
         </div>
 
         <div ng-if="$ctrl.isNewContact">
-            <button ng-disabled="contactDetailForm.$invalid">
+            <button 
+            ng-disabled="contactDetailForm.$invalid"
+            ng-click="$ctrl.saveContact();">
                 Create contact
             </button>
         </div>
-
+        <div ng-if="!$ctrl.isNewContact">
+            <button 
+            class="delete"
+            ng-click="$ctrl.deleteContact();">
+                Delete contact
+            </button>
+        </div>
     </form>
 </div>
